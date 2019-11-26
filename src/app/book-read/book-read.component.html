@@ -1,0 +1,11 @@
+<table border="2">
+  <th>Đã đọc</th>
+
+  <tr *ngFor="let book of book" >
+    <div *ngIf="book.read">
+      <td>{{book.name}}</td>
+      <td><a [routerLink]="['/list-book', book.id]" (click)="reReadBook(book.id)">Đọc lại</a></td>
+    </div>
+  </tr>
+</table>
+<a routerLink="/">Trang chủ</a>
